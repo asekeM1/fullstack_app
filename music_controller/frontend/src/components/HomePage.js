@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import RoomJoinPage from "./RoomJoinPage";
 import CreateJoinPage from "./CreateRoomPage";
+import Room from "./Room";
 import { 
     BrowserRouter as Router,
     Route, 
@@ -24,6 +25,7 @@ export default class HomePage extends Component {
                     </Route>
                     <Route path="/join" component={RoomJoinPage}></Route>
                     <Route path="/create" component={CreateJoinPage}></Route>
+                    <Route path="/room/:roomCode" component={Room}></Route>
                 </Switch>
             </Router>
         );
